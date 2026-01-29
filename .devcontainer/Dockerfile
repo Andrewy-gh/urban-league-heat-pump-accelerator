@@ -1,7 +1,7 @@
-FROM mcr.microsoft.com/devcontainers/ruby:3.2-bullseye
+FROM mcr.microsoft.com/devcontainers/ruby:3.2.7-bullseye
 
 # Install Rails
-RUN gem install rails webdrivers 
+RUN gem install rails -v '~> 7.1.0' 
 RUN mkdir /gems
 RUN chown vscode:vscode /gems
 ENV BUNDLE_PATH="/gems"
